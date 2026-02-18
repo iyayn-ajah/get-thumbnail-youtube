@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            transition: all 0.2s ease;
+        }
+        
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: -0.02em;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        
+        .light-mode ::-webkit-scrollbar-track {
+            background: #f2f7f5;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 0;
+        }
+        
+        .light-mode ::-webkit-scrollbar-thumb {
+            background: #ddd;
+        }
+        
+        .raised-shadow {
+            box-shadow: 0.4rem 0.4rem 0 #222;
+            transition: all 0.2s ease;
+        }
+        
+        .light-mode .raised-shadow {
+            box-shadow: 0.4rem 0.4rem 0 #ccc;
+        }
+        
+        .raised-shadow:hover {
+            transform: translate(0.1rem, 0.1rem);
+            box-shadow: 0.2rem 0.2rem 0 #222;
+        }
+        
+        .light-mode .raised-shadow:hover {
+            box-shadow: 0.2rem 0.2rem 0 #ccc;
+        }
+        
+        .theme-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            border: 2px solid #333;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0.3rem 0.3rem 0 #222;
+        }
+        
+        .light-mode .theme-toggle-btn {
+            background: #fff;
+            border: 2px solid #222;
+            box-shadow: 0.3rem 0.3rem 0 #ccc;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border: 2px solid #333;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: #111;
+        }
+        
+        .light-mode .badge {
+            border: 2px solid #222;
+            background: #f2f7f5;
+        }
+        
+        @keyframes broken-link {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        
+        .broken-link {
+            animation: broken-link 2s ease-in-out infinite;
+        }
+        
+        input, button, a {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        
+        input:focus {
+            outline: none;
+        }
