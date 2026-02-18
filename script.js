@@ -1,4 +1,4 @@
- const themeToggleBtn = document.getElementById('themeToggle');
+const themeToggleBtn = document.getElementById('themeToggle');
         const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
         const html = document.documentElement;
@@ -38,6 +38,13 @@
                 element.classList.add('border-blackish', 'hover:bg-blackish', 'hover:text-white');
             });
             
+            const urlInput = document.getElementById('urlInput');
+            if (urlInput) {
+                urlInput.style.color = '#333';
+                urlInput.classList.remove('text-white');
+                urlInput.classList.add('text-blackish');
+            }
+            
             document.getElementById('notification').classList.remove('border-white', 'bg-black', 'text-white');
             document.getElementById('notification').classList.add('border-blackish', 'bg-whitish', 'text-blackish');
             
@@ -63,6 +70,13 @@
                 element.classList.remove('border-blackish', 'hover:bg-blackish', 'hover:text-white');
                 element.classList.add('border-white', 'hover:bg-white', 'hover:text-black');
             });
+            
+            const urlInput = document.getElementById('urlInput');
+            if (urlInput) {
+                urlInput.style.color = '';
+                urlInput.classList.remove('text-blackish');
+                urlInput.classList.add('text-white');
+            }
             
             document.getElementById('notification').classList.remove('border-blackish', 'bg-whitish', 'text-blackish');
             document.getElementById('notification').classList.add('border-white', 'bg-black', 'text-white');
