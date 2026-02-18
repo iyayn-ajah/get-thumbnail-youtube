@@ -106,3 +106,20 @@
         input:focus {
             outline: none;
         }
+
+        .light-mode input[type="text"] {
+            color: #333 !important;
+            background-color: transparent;
+        }
+
+        .light-mode input[type="text"]::placeholder {
+            color: #666 !important;
+        }
+
+        .light-mode #urlInput {
+            color: #333 !important;
+        }
+
+        .light-mode #urlInput::placeholder {
+            color: #999 !important;
+        }
