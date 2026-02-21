@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Shikaku Amja</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/upload-file-lab/fileupload7/main/uploads/1766991657912.jpeg?format=png&name=900x900">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'heading': ['"IBM Plex Mono"', 'monospace'],
+                        'body': ['"IBM Plex Mono"', 'monospace'],
+                    },
+                    colors: {
+                        'blackish': '#333',
+                        'whitish': '#f2f7f5',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            transition: all 0.2s ease;
+        }
+        
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: -0.02em;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        
+        .light-mode ::-webkit-scrollbar-track {
+            background: #f2f7f5;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 0;
+        }
+        
+        .light-mode ::-webkit-scrollbar-thumb {
+            background: #ddd;
+        }
+        
+        .raised-shadow {
+            box-shadow: 0.4rem 0.4rem 0 #222;
+            transition: all 0.2s ease;
+        }
+        
+        .light-mode .raised-shadow {
+            box-shadow: 0.4rem 0.4rem 0 #ccc;
+        }
+        
+        .raised-shadow:hover {
+            transform: translate(0.1rem, 0.1rem);
+            box-shadow: 0.2rem 0.2rem 0 #222;
+        }
+        
+        .light-mode .raised-shadow:hover {
+            box-shadow: 0.2rem 0.2rem 0 #ccc;
+        }
+        
+        .theme-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            border: 2px solid #333;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0.3rem 0.3rem 0 #222;
+        }
+        
+        .light-mode .theme-toggle-btn {
+            background: #fff;
+            border: 2px solid #222;
+            box-shadow: 0.3rem 0.3rem 0 #ccc;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border: 2px solid #333;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: #111;
+        }
+        
+        .light-mode .badge {
+            border: 2px solid #222;
+            background: #f2f7f5;
+        }
+        
+        .private-btn {
+            border: 2px solid #444;
+            background: #222;
+            color: #666;
+            cursor: not-allowed;
+        }
+        
+        .light-mode .private-btn {
+            border: 2px solid #ccc;
+            background: #eee;
+            color: #999;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            line-height: 1;
+            font-weight: 900;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+        }
+        
+        @keyframes broken-link {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        
+        .broken-link {
+            animation: broken-link 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-body bg-black text-white min-h-screen">
+    <button id="themeToggle" class="theme-toggle-btn">
+        <svg id="theme-toggle-dark-icon" class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg id="theme-toggle-light-icon" class="w-5 h-5 text-black hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+        </svg>
+    </button>
+
+    <main class="container mx-auto px-4 py-8 max-w-4xl flex items-center justify-center min-h-screen">
+        <div class="border-2 border-white p-8 raised-shadow w-full">
+            <div class="text-center mb-8">
+                <div class="error-code mb-4">404</div>
+                <h1 class="text-3xl md:text-4xl font-bold font-heading mb-6 flex items-center justify-center gap-4">
+                    <span class="broken-link text-4xl">🔗</span>
+                    Page Not Found
+                    <span class="broken-link text-4xl">🔗</span>
+                </h1>
+                <p class="text-xl mb-8">Oops! The page you're looking for seems to have wandered off into the digital void.</p>
+            </div>
+
+            <div class="grid gap-6 mb-8">
+                <div class="border-2 border-white p-6 hover:scale-[1.02] transition-all duration-300">
+                    <p class="text-lg mb-4">
+                        <span class="text-2xl mr-3">🚀</span>
+                        Let's get you back on track:
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <a href="/" class="border-2 border-white px-6 py-3 hover:bg-white hover:text-black inline-flex items-center gap-2">
+                            <span>🏠</span> Go Home
+                        </a>
+                        <a href="/#project" class="border-2 border-white px-6 py-3 hover:bg-white hover:text-black inline-flex items-center gap-2">
+                            <span>🛠️</span> View Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="mainFooter" class="border-t-2 border-white py-6 px-4 bg-black">
+        <div class="container mx-auto text-center">
+            <p class="text-lg">&copy; 2025 Rapikuzu Amja</p>
+            <p class="text-sm mt-2">Made with <span class="text-red-500">♥</span> from Indonesia</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const html = document.documentElement;
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+
+        if (savedTheme === 'light') {
+            enableLightMode();
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+
+        function toggleTheme() {
+            if (html.classList.contains('dark')) {
+                enableLightMode();
+                localStorage.setItem('theme', 'light');
+            } else {
+                enableDarkMode();
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        function enableLightMode() {
+            html.classList.remove('dark');
+            body.classList.add('light-mode');
+            body.classList.remove('bg-black', 'text-white');
+            body.classList.add('bg-whitish', 'text-blackish');
+            
+            const mainContent = document.querySelector('main .border-white');
+            if (mainContent) {
+                mainContent.classList.remove('border-white');
+                mainContent.classList.add('border-blackish');
+            }
+            
+            document.querySelectorAll('.border-white').forEach(element => {
+                element.classList.remove('border-white');
+                element.classList.add('border-blackish');
+            });
+            
+            document.querySelectorAll('a.border-white').forEach(link => {
+                link.classList.remove('border-white', 'hover:bg-white', 'hover:text-black');
+                link.classList.add('border-blackish', 'hover:bg-blackish', 'hover:text-white');
+            });
+            
+            const footer = document.getElementById('mainFooter');
+            if (footer) {
+                footer.classList.remove('bg-black', 'border-white');
+                footer.classList.add('bg-white', 'border-blackish');
+                footer.classList.add('text-blackish');
+            }
+            
+            themeToggleBtn.classList.remove('bg-black', 'border-white');
+            themeToggleBtn.classList.add('bg-white', 'border-blackish');
+            
+            themeToggleDarkIcon.classList.add('hidden');
+            themeToggleLightIcon.classList.remove('hidden');
+        }
+
+        function enableDarkMode() {
+            html.classList.add('dark');
+            body.classList.remove('light-mode');
+            body.classList.remove('bg-whitish', 'text-blackish');
+            body.classList.add('bg-black', 'text-white');
+            
+            const mainContent = document.querySelector('main .border-blackish');
+            if (mainContent) {
+                mainContent.classList.remove('border-blackish');
+                mainContent.classList.add('border-white');
+            }
+            
+            document.querySelectorAll('.border-blackish').forEach(element => {
+                element.classList.remove('border-blackish');
+                element.classList.add('border-white');
+            });
+            
+            document.querySelectorAll('a.border-blackish').forEach(link => {
+                link.classList.remove('border-blackish', 'hover:bg-blackish', 'hover:text-white');
+                link.classList.add('border-white', 'hover:bg-white', 'hover:text-black');
+            });
+            
+            const footer = document.getElementById('mainFooter');
+            if (footer) {
+                footer.classList.remove('bg-white', 'border-blackish', 'text-blackish');
+                footer.classList.add('bg-black', 'border-white', 'text-white');
+            }
+            
+            themeToggleBtn.classList.remove('bg-white', 'border-blackish');
+            themeToggleBtn.classList.add('bg-black', 'border-white');
+            
+            themeToggleDarkIcon.classList.remove('hidden');
+            themeToggleLightIcon.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
